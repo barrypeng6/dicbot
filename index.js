@@ -41,9 +41,9 @@ function handleEvent(event) {
       let answer = senses.reduce((acc, e, i) => {
         return acc + (i+1) + ': ' + e.definitions[0] + '\n\n'
       }, '');
-      let definitions = result.results[0].lexicalEntries[0].entries[0].senses[0].definitions[0]
       return client.replyMessage(event.replyToken, { type: 'text', text: '你查的是' + result.results[0].word + '\n定義：\n' + answer });
     }
+    return client.replyMessage(event.replyToken, { type: 'text', text: '查無' + event.message.text});
   });
 }
 
