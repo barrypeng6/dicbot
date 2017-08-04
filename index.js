@@ -3,12 +3,12 @@ const express = require('express');
 const request = require('request');
 
 const config = {
-  channelAccessToken: '/oDyzG4L2rx00RWJJ2UUb6xjEEwUBYy1AhkKnEiPQImTnViTOpuu4j7yKLUHtkNw7YPookYMjSYd1xImN5pV5MWeXDonJZ737ztf4+xzQPjvrrHCg2RIN9RewhsFrNdh30ZTLc/yTgtHosjOBQEguwdB04t89/1O/w1cDnyilFU=',
-  channelSecret: 'ae1af91782cb133bc14058b445f64ebc'
+  channelAccessToken: channelAccessToken,
+  channelSecret: channelSecret
 };
 
-const app_id = '6f51efe4'
-const app_key = '07ca336e2b0dbbc6cf67a6b12d7a29d6'
+const app_id = appId
+const app_key = appKey
 
 const client = new line.Client(config);
 const app = express();
